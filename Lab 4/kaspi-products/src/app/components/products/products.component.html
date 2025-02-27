@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Products</h2>
+  <div class="products-grid">
+    <div class="product-card" *ngFor="let product of products">
+      
+      <div class="image-container">
+        <button class="btn prev-btn" (click)="prevImg(product)">❮</button>
+        <img [src]="product.imageUrls[imgIndex[product.name]]" class="product-image" alt="{{ product.name }}">
+        <button class="btn next-btn" (click)="nextImg(product)">❯</button>
+      </div>
+      
+      <div class="product-info">
+        <h5 class="product-title">{{ product.name }}</h5>
+        <p class="product-text">{{ product.description }}</p>
+        <p class="product-rating"><strong>Rating:</strong> ⭐{{ product.rating }}</p>
+        
+        <div class="buttons-container">
+          <a [href]="product.link" class="btn btn-kaspi" target="_blank">Kaspi.kz</a>
+          <div class="share-container">
+            <button class="btn btn-share" (click)="toggleShare(product)">Share</button>
+            <div class="share-options" *ngIf="shareVisible[product.name]">
+              <button class="btn btn-whatsapp" (click)="shareOnWhatsApp(product)">WhatsApp</button>
+              <button class="btn btn-telegram" (click)="shareOnTelegram(product)">Telegram</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
