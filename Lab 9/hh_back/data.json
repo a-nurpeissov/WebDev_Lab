@@ -1,0 +1,53 @@
+[
+    {
+      "model": "api.company",
+      "pk": 1,
+      "fields": {
+        "name": "Google",
+        "description": "Tech company",
+        "city": "Mountain View",
+        "address": "1600 Amphitheatre Parkway"
+      }
+    },
+    {
+      "model": "api.company",
+      "pk": 2,
+      "fields": {
+        "name": "Amazon",
+        "description": "E-commerce giant",
+        "city": "Seattle",
+        "address": "410 Terry Ave North"
+      }
+    },
+    {
+      "model": "api.vacancy",
+      "pk": 1,
+      "fields": {
+        "name": "Software Engineer",
+        "description": "Backend developer",
+        "salary": 95000,
+        "company": 1
+      }
+    },
+    {
+      "model": "api.vacancy",
+      "pk": 2,
+      "fields": {
+        "name": "Data Analyst",
+        "description": "Analyze data trends",
+        "salary": 75000,
+        "company": 2
+      }
+    },
+    {
+      "model": "api.vacancy",
+      "pk": 3,
+      "fields": {
+        "name": "Product Manager",
+        "description": "Manage products",
+        "salary": 110000,
+        "company": 1
+      }
+    }
+  ]
+  
